@@ -1,0 +1,20 @@
+sample:
+  # sample main(master) database
+  main.datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33060/sample?serverTimezone=Asia/Seoul&characterEncoding=utf8
+    username: user
+    password: 1234
+    maximumPoolSize: 10
+    maxLifetime: 55000
+    poolName: sample-main-pool
+
+  # sample replica(slave) database for read only
+  replica.datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33070/sample?serverTimezone=Asia/Seoul&characterEncoding=utf8
+    username: user
+    password: 1234
+    maximumPoolSize: 10
+    maxLifetime: 55000
+    poolName: sample-replica-pool
